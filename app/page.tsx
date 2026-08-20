@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const features = [
@@ -49,7 +48,7 @@ export default function Home() {
           </div>
         </div>
         <div className="sailboat-frame">
-          <Image src="/moonlit-sailboat.svg" alt="Sailboat on the water beneath a full moon" fill priority sizes="(max-width: 900px) 90vw, 48vw" />
+          <img src="/moonlight-approved-hero.jpg" alt="Moonlit sailboat on the water" className="approved-hero-image" />
         </div>
       </section>
 
