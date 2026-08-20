@@ -48,7 +48,7 @@ export default function Home() {
           </div>
         </div>
         <div className="sailboat-frame">
-          <img src="/moonlight-approved-hero.jpg" alt="Moonlit sailboat on the water" className="approved-hero-image" />
+          <img src="/moonlight-approved-hero-square.jpg" alt="Moonlit sailboat on the water" className="approved-hero-image" />
         </div>
       </section>
 
