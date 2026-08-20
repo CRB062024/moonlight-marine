@@ -1,41 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
-  <title id="title">Moonlit sailboat</title>
-  <desc id="desc">A refined sailboat silhouette on calm water beneath a moonlit sky.</desc>
-  <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#173d43"/>
-      <stop offset="0.58" stop-color="#315f63"/>
-      <stop offset="1" stop-color="#0c2e36"/>
-    </linearGradient>
-    <radialGradient id="moon" cx="38%" cy="30%" r="38%">
-      <stop offset="0" stop-color="#fff4c9"/>
-      <stop offset="0.65" stop-color="#f3d58f"/>
-      <stop offset="1" stop-color="#d99a55" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4c7b7d"/>
-      <stop offset="1" stop-color="#092b34"/>
-    </linearGradient>
-  </defs>
-  <rect width="900" height="900" fill="url(#sky)"/>
-  <circle cx="315" cy="255" r="190" fill="url(#moon)"/>
-  <circle cx="315" cy="255" r="66" fill="#fff1bd" opacity=".96"/>
-  <path d="M0 570 Q220 548 450 574 T900 560 V900 H0Z" fill="url(#water)"/>
-  <g fill="none" stroke="#d9e5dc" stroke-linecap="round" opacity=".28">
-    <path d="M60 645 C210 625 315 665 465 643 S720 630 860 648" stroke-width="4"/>
-    <path d="M130 705 C250 688 355 720 500 700 S735 690 835 707" stroke-width="3"/>
-    <path d="M35 775 C190 752 310 795 450 773 S705 760 880 780" stroke-width="3"/>
-  </g>
-  <g transform="translate(105 250)">
-    <path d="M240 335 L240 90 L430 335 Z" fill="#f5f0e5"/>
-    <path d="M240 112 L240 335 L100 335 Z" fill="#d8c7a6"/>
-    <path d="M239 80 L239 350" stroke="#10292d" stroke-width="12" stroke-linecap="round"/>
-    <path d="M86 340 Q235 390 452 338 L420 382 Q248 415 116 382Z" fill="#10292d"/>
-    <path d="M78 339 Q245 375 458 338" fill="none" stroke="#f3d18f" stroke-width="7"/>
-    <path d="M430 330 L488 330" stroke="#10292d" stroke-width="10" stroke-linecap="round"/>
-    <path d="M239 90 L260 54" stroke="#f3d18f" stroke-width="5" stroke-linecap="round"/>
-  </g>
-  <g fill="#dfe9df" opacity=".7">
-    <circle cx="690" cy="170" r="3"/><circle cx="760" cy="235" r="2"/><circle cx="610" cy="120" r="2"/><circle cx="790" cy="350" r="3"/><circle cx="130" cy="180" r="2"/>
-  </g>
+<title id="title">Moonlit sailboat on the water</title><desc id="desc">A detailed sailboat cruising beneath a full moon on calm water, matching the Moonlight Marine navy and gold design.</desc>
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#03182e"/><stop offset=".58" stop-color="#0b2d4d"/><stop offset="1" stop-color="#071d31"/></linearGradient>
+ <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#123b59"/><stop offset="1" stop-color="#020f20"/></linearGradient>
+ <radialGradient id="moonGlow"><stop stop-color="#fff8dc" stop-opacity=".55"/><stop offset=".45" stop-color="#f7e4ad" stop-opacity=".18"/><stop offset="1" stop-color="#f7e4ad" stop-opacity="0"/></radialGradient>
+ <linearGradient id="sail" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8e6"/><stop offset=".65" stop-color="#f2dfb3"/><stop offset="1" stop-color="#c9b37f"/></linearGradient>
+ <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#243c4d"/><stop offset="1" stop-color="#020c18"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="900" height="900" fill="url(#sky)"/>
+<ellipse cx="540" cy="245" rx="270" ry="270" fill="url(#moonGlow)"/>
+<circle cx="540" cy="245" r="72" fill="#fff5d7"/>
+<g fill="#d8d8cf" opacity=".35"><ellipse cx="515" cy="215" rx="24" ry="10"/><ellipse cx="562" cy="268" rx="18" ry="8"/><ellipse cx="548" cy="205" rx="12" ry="7"/><ellipse cx="522" cy="275" rx="14" ry="6"/></g>
+<g fill="#b5c5d2" opacity=".18"><path d="M20 310c95-50 190-48 280 0-88-12-180-10-280 0Z"/><path d="M620 335c90-45 180-40 260 4-83-13-170-14-260-4Z"/></g>
+<path d="M0 535c130-20 235 18 350-4 135-25 235-5 330-12 80-6 145 7 220 28v353H0Z" fill="url(#sea)"/>
+<g fill="none" stroke-linecap="round"><path d="M30 650c140-22 230 22 370-2 130-22 270 15 470-4" stroke="#cfe0df" stroke-opacity=".18" stroke-width="5"/><path d="M20 705c170-18 250 18 405-2 130-16 280 12 455-6" stroke="#dfe8df" stroke-opacity=".16" stroke-width="4"/><path d="M80 775c130-15 250 20 390-2 150-24 260 14 360-2" stroke="#dfe8df" stroke-opacity=".13" stroke-width="3"/></g>
+<path d="M475 510L475 160L700 515Z" fill="url(#sail)" stroke="#fff6dd" stroke-opacity=".45" stroke-width="3"/>
+<path d="M465 205L465 510L285 510Z" fill="#e9d6a9" stroke="#fff3d4" stroke-opacity=".35" stroke-width="3"/>
+<path d="M466 148V532" stroke="#071725" stroke-width="12" stroke-linecap="round"/>
+<path d="M466 154L704 515" stroke="#d7b86c" stroke-opacity=".45" stroke-width="3"/>
+<path d="M465 175L292 510" stroke="#d7b86c" stroke-opacity=".38" stroke-width="3"/>
+<path d="M274 515c118 30 270 35 450 0l-38 48c-145 30-286 26-385-1Z" fill="url(#hull)" stroke="#071725" stroke-width="8"/>
+<path d="M282 516c130 27 287 28 437-2" fill="none" stroke="#e0b65e" stroke-width="7"/>
+<path d="M320 492h340" stroke="#0b1d2d" stroke-width="9"/><path d="M365 470h175" stroke="#d7b86c" stroke-opacity=".7" stroke-width="4"/>
+<rect x="398" y="448" width="55" height="30" rx="3" fill="#dfeaf0" opacity=".8"/><rect x="466" y="444" width="62" height="34" rx="3" fill="#dfeaf0" opacity=".8"/>
+<g fill="#ffc65a"><circle cx="356" cy="500" r="5"/><circle cx="548" cy="501" r="5"/><circle cx="630" cy="501" r="5"/></g>
+<path d="M705 510l52 0" stroke="#0b1d2d" stroke-width="10" stroke-linecap="round"/><path d="M474 150l18-32" stroke="#d7b86c" stroke-width="5" stroke-linecap="round"/>
+<g opacity=".65" fill="#e5edf0"><circle cx="130" cy="160" r="2"/><circle cx="190" cy="245" r="3"/><circle cx="760" cy="150" r="2"/><circle cx="820" cy="290" r="3"/><circle cx="705" cy="90" r="2"/></g>
+<g fill="#f8d37c" opacity=".55" filter="url(#glow)"><ellipse cx="455" cy="585" rx="110" ry="18"/><ellipse cx="565" cy="625" rx="150" ry="12"/></g>
 </svg>
