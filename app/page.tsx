@@ -1,5 +1,16 @@
 import Link from "next/link";
 
+const services = [
+  ["General", "general"],
+  ["Diving", "diving"],
+  ["Electrical", "electrical"],
+  ["Electronics", "electronics"],
+  ["Maintenance", "maintenance"],
+  ["Mechanical", "mechanical"],
+  ["Plumbing", "plumbing"],
+  ["Salvage", "salvage"],
+] as const;
+
 const features = [
   { icon: "shield", title: "SAFETY FIRST", text: "Reliable systems built to keep you safe on the water." },
   { icon: "bolt", title: "EXPERT DIAGNOSTICS", text: "Advanced troubleshooting and precision solutions." },
@@ -26,7 +37,12 @@ export default function Home() {
         </Link>
         <nav className="main-nav" aria-label="Main navigation">
           <Link className="active" href="/">HOME</Link>
-          <Link href="/services">SERVICES</Link>
+          <details className="services-dropdown">
+            <summary>SERVICES <span aria-hidden="true">⌄</span></summary>
+            <div className="services-menu">
+              {services.map(([title, slug]) => <Link href={`/services/${slug}`} key={slug}>{title}</Link>)}
+            </div>
+          </details>
           <Link href="/about">ABOUT</Link>
           <Link href="/contact">CONTACT</Link>
         </nav>
@@ -43,7 +59,7 @@ export default function Home() {
           <div className="gold-rule" />
           <p>Specializing in marine electrical systems, diagnostics, and custom solutions for power, safety, and performance you can trust.</p>
           <div className="hero-actions">
-            <Link className="primary-cta" href="/services"><span>ϟ</span> OUR SERVICES</Link>
+            <Link className="primary-cta" href="/services/electrical"><span>ϟ</span> OUR SERVICES</Link>
             <Link className="secondary-cta" href="/contact">CONTACT US</Link>
           </div>
         </div>
