@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -18,7 +19,10 @@ export default function Home() {
           <Link className="text-link" href="/services">Explore services <span>→</span></Link>
         </div>
         <div className="tide-note"><span>01</span><span>Service, support,<br />and seaworthy solutions</span></div>
-        <div className="sun" aria-hidden="true" /><div className="horizon" aria-hidden="true" />
+        <div className="sun" aria-label="Moonlit sailboat on the water">
+          <Image className="hero-sailboat" src="/sailboat.svg" alt="Sailboat on calm water beneath a full moon" fill priority sizes="(max-width: 720px) 105vw, 52vw" />
+        </div>
+        <div className="horizon" aria-hidden="true" />
       </section>
       <section className="story" id="story">
         <p className="eyebrow">The Moonlight standard</p>
