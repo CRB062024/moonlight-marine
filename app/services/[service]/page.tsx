@@ -16,13 +16,18 @@ export default function ServicePage({ params }: { params: { service: string } })
         <Link className="logo dark-logo" href="/"><span className="mark">M</span><span>Moonlight<br />Marine</span></Link>
         <nav><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/contact">Contact</Link></nav>
       </header>
-      <section className="detail">
-        <Link className="back-link" href="/services">← All services</Link>
-        <p className="eyebrow">Moonlight Marine</p><h1>{service.title}</h1>
-        <div className="detail-copy">
-          {service.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          {service.bullets && <ul>{service.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}
-          <Link className="button ink-button" href="/contact">Request service</Link>
+      <section className="detail service-detail">
+        <div className="service-page-image">
+          <img src="/moonlight-approved-hero-square.jpg" alt="Moonlit sailboat on the water" />
+        </div>
+        <div className="service-detail-content">
+          <Link className="back-link" href="/services">← All services</Link>
+          <p className="eyebrow">Moonlight Marine</p><h1>{service.title}</h1>
+          <div className="detail-copy">
+            {service.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {service.bullets && <ul>{service.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}
+            <Link className="button ink-button" href="/contact">Request service</Link>
+          </div>
         </div>
       </section>
     </main>
