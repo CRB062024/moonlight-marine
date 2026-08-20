@@ -1,37 +1,37 @@
-const navigation = ["Explore", "The Experience", "About", "Contact"];
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
       <section className="hero">
         <nav className="nav" aria-label="Main navigation">
-          <a className="logo" href="#" aria-label="Moonlight Marine home">
+          <Link className="logo" href="/" aria-label="Moonlight Marine home">
             <span className="mark">M</span><span>Moonlight<br />Marine</span>
-          </a>
-          <div className="nav-links">{navigation.map((item) => <a href="#" key={item}>{item}</a>)}</div>
-          <a className="button button-small" href="#contact">Start your journey</a>
+          </Link>
+          <div className="nav-links"><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/contact">Contact</Link></div>
+          <Link className="button button-small" href="/contact">Request service</Link>
         </nav>
         <div className="hero-content">
-          <p className="eyebrow">Est. on the water</p>
-          <h1>Find your<br /><em>way back</em> to the water.</h1>
-          <p className="hero-copy">Moonlight Marine is an invitation to slow down, explore farther, and make room for the moments that matter most.</p>
-          <a className="text-link" href="#story">Discover Moonlight <span>→</span></a>
+          <p className="eyebrow">Madisonville, Louisiana</p>
+          <h1>Service for<br /><em>life on the water.</em></h1>
+          <p className="hero-copy">Responsive marine repair, maintenance, and support for the systems that make every journey possible.</p>
+          <Link className="text-link" href="/services">Explore services <span>→</span></Link>
         </div>
-        <div className="tide-note"><span>01</span><span>Where the horizon<br />becomes yours</span></div>
+        <div className="tide-note"><span>01</span><span>Service, support,<br />and seaworthy solutions</span></div>
         <div className="sun" aria-hidden="true" /><div className="horizon" aria-hidden="true" />
       </section>
       <section className="story" id="story">
         <p className="eyebrow">The Moonlight standard</p>
         <div className="story-grid">
-          <h2>Every journey<br />deserves a little<br /><em>more room.</em></h2>
-          <div><p>We believe time on the water should feel effortless. Thoughtful details, capable design, and a genuine love of the coastline shape every Moonlight experience.</p><a className="text-link dark-link" href="#contact">Our story <span>→</span></a></div>
+          <h2>Ready when<br />you need us<br /><em>most.</em></h2>
+          <div><p>We return calls within 24 hours and emails within 48 hours. We make every attempt to have someone aboard your vessel within 96 hours of initial contact for an appraisal and assessment of your project.</p><Link className="text-link dark-link" href="/services">Our services <span>→</span></Link></div>
         </div>
       </section>
       <section className="contact" id="contact">
-        <p className="eyebrow">Make it yours</p><h2>Let&apos;s chart<br />what&apos;s next.</h2>
-        <a className="button" href="mailto:hello@moonlightmarine.com">Get in touch</a>
+        <p className="eyebrow">Get in touch</p><h2>Let&apos;s keep you<br /><em>underway.</em></h2>
+        <Link className="button" href="/contact">Contact Moonlight</Link>
       </section>
-      <footer><span>© {new Date().getFullYear()} Moonlight Marine</span><span>Made for life on the water</span></footer>
+      <footer><span>© {new Date().getFullYear()} Moonlight Marine</span><span>Madisonville, LA</span></footer>
     </main>
   );
 }
