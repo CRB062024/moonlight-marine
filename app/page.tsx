@@ -20,7 +20,7 @@ export default function Home() {
         </div>
         <div className="tide-note"><span>01</span><span>Service, support,<br />and seaworthy solutions</span></div>
         <div className="sun" aria-label="Moonlit sailboat on the water">
-          <Image className="hero-sailboat" src="/sailboat.svg" alt="Sailboat on calm water beneath a full moon" fill priority sizes="(max-width: 720px) 105vw, 52vw" />
+          <Image className="hero-sailboat" src="/moonlit-sailboat.svg" alt="Sailboat on calm water beneath a full moon" fill priority sizes="(max-width: 720px) 105vw, 52vw" />
         </div>
         <div className="horizon" aria-hidden="true" />
       </section>
