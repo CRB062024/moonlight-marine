@@ -1,41 +1,74 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const features = [
+  { icon: "shield", title: "SAFETY FIRST", text: "Reliable systems built to keep you safe on the water." },
+  { icon: "bolt", title: "EXPERT DIAGNOSTICS", text: "Advanced troubleshooting and precision solutions." },
+  { icon: "wrench", title: "QUALITY WORKMANSHIP", text: "Top-tier craftsmanship and attention to detail." },
+  { icon: "boat", title: "MARINE EXPERIENCE", text: "Years of hands-on experience you can depend on." },
+];
+
+function FeatureIcon({ icon }: { icon: string }) {
+  const common = { fill: "none", stroke: "currentColor", strokeWidth: 2.4, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  if (icon === "shield") return <svg viewBox="0 0 48 48" aria-hidden="true"><path {...common} d="M24 4 39 10v11c0 10-6 18-15 23C15 39 9 31 9 21V10l15-6Z"/><path {...common} d="m17 24 5 5 10-11"/></svg>;
+  if (icon === "bolt") return <svg viewBox="0 0 48 48" aria-hidden="true"><path {...common} d="M28 3 10 27h13l-3 18 18-25H25l3-17Z"/></svg>;
+  if (icon === "wrench") return <svg viewBox="0 0 48 48" aria-hidden="true"><path {...common} d="m29 8 4 4-16 16-4-4L29 8Z"/><path {...common} d="M34 5a9 9 0 0 0 9 11l-7 7-6-6 7-7A9 9 0 0 0 34 5Z"/><circle {...common} cx="12" cy="36" r="6"/></svg>;
+  return <svg viewBox="0 0 48 48" aria-hidden="true"><path {...common} d="M5 31h38l-6 7H13l-8-7Z"/><path {...common} d="M20 31V12h13l4 19M20 16h13"/><path {...common} d="M8 40c3 2 6 2 9 0 3 2 6 2 9 0 3 2 6 2 9 0"/></svg>;
+}
+
 export default function Home() {
   return (
-    <main>
-      <section className="hero">
-        <nav className="nav" aria-label="Main navigation">
-          <Link className="logo" href="/" aria-label="Moonlight Marine home">
-            <span className="mark">M</span><span>Moonlight<br />Marine</span>
-          </Link>
-          <div className="nav-links"><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/contact">Contact</Link></div>
-          <Link className="button button-small" href="/contact">Request service</Link>
+    <main className="mock-home">
+      <header className="topbar">
+        <Link className="brand" href="/" aria-label="Moonlight Marine home">
+          <span className="crescent" aria-hidden="true" />
+          <span className="brand-word">MOONLIGHT</span>
+          <span className="brand-sub"><i /> MARINE <i /></span>
+        </Link>
+        <nav className="main-nav" aria-label="Main navigation">
+          <Link className="active" href="/">HOME</Link>
+          <Link href="/services">SERVICES</Link>
+          <Link href="/about">ABOUT</Link>
+          <Link href="/contact">CONTACT</Link>
         </nav>
-        <div className="hero-content">
-          <p className="eyebrow">Madisonville, Louisiana</p>
-          <h1>Service for<br /><em>life on the water.</em></h1>
-          <p className="hero-copy">Responsive marine repair, maintenance, and support for the systems that make every journey possible.</p>
-          <Link className="text-link" href="/services">Explore services <span>→</span></Link>
+        <div className="partner-links">
+          <a href="https://abycinc.org/" target="_blank" rel="noreferrer">ABYC <span>↗</span></a>
+          <a href="https://bayousailing.com/" target="_blank" rel="noreferrer">BAYOU SAILING <span>↗</span></a>
         </div>
-        <div className="tide-note"><span>01</span><span>Service, support,<br />and seaworthy solutions</span></div>
-        <div className="sun" aria-label="Moonlit sailboat on the water">
-          <Image className="hero-sailboat" src="/moonlit-sailboat.svg" alt="Sailboat on calm water beneath a full moon" fill priority sizes="(max-width: 720px) 105vw, 52vw" />
+      </header>
+
+      <section className="design-hero">
+        <div className="blueprint" aria-hidden="true" />
+        <div className="hero-copy-new">
+          <h1>EXPERT MARINE<br />ELECTRICAL SERVICES</h1>
+          <div className="gold-rule" />
+          <p>Specializing in marine electrical systems, diagnostics, and custom solutions for power, safety, and performance you can trust.</p>
+          <div className="hero-actions">
+            <Link className="primary-cta" href="/services"><span>ϟ</span> OUR SERVICES</Link>
+            <Link className="secondary-cta" href="/contact">CONTACT US</Link>
+          </div>
         </div>
-        <div className="horizon" aria-hidden="true" />
-      </section>
-      <section className="story" id="story">
-        <p className="eyebrow">The Moonlight standard</p>
-        <div className="story-grid">
-          <h2>Ready when<br />you need us<br /><em>most.</em></h2>
-          <div><p>We return calls within 24 hours and emails within 48 hours. We make every attempt to have someone aboard your vessel within 96 hours of initial contact for an appraisal and assessment of your project.</p><Link className="text-link dark-link" href="/services">Our services <span>→</span></Link></div>
+        <div className="sailboat-frame">
+          <Image src="/moonlit-sailboat.svg" alt="Sailboat on the water beneath a full moon" fill priority sizes="(max-width: 900px) 90vw, 48vw" />
         </div>
       </section>
-      <section className="contact" id="contact">
-        <p className="eyebrow">Get in touch</p><h2>Let&apos;s keep you<br /><em>underway.</em></h2>
-        <Link className="button" href="/contact">Contact Moonlight</Link>
+
+      <section className="feature-strip" aria-label="Moonlight Marine advantages">
+        {features.map((feature) => (
+          <div className="feature" key={feature.title}>
+            <div className="feature-icon"><FeatureIcon icon={feature.icon} /></div>
+            <h2>{feature.title}</h2>
+            <p>{feature.text}</p>
+          </div>
+        ))}
       </section>
-      <footer><span>© {new Date().getFullYear()} Moonlight Marine</span><span>Madisonville, LA</span></footer>
+
+      <footer className="design-footer">
+        <a href="tel:+15041234567" className="footer-item"><span className="footer-icon">⌕</span> (504) 123-4567</a>
+        <a href="mailto:info@moonlightmarine.com" className="footer-item"><span className="footer-icon">✉</span> info@moonlightmarine.com</a>
+        <span className="footer-item"><span className="footer-icon">●</span> New Orleans, Louisiana</span>
+        <div className="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a></div>
+      </footer>
     </main>
   );
 }
