@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getService, services } from "../data";
+import { SiteLogo } from "@/components/site-logo";
 
 export function generateStaticParams() {
   return services.map((service) => ({ service: service.slug }));
@@ -13,7 +14,7 @@ export default function ServicePage({ params }: { params: { service: string } })
   return (
     <main className="site-page">
       <header className="inner-nav">
-        <Link className="logo dark-logo" href="/"><span className="mark">M</span><span>Moonlight<br />Marine</span></Link>
+        <SiteLogo variant="compact" />
         <nav><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/contact">Contact</Link></nav>
       </header>
       <section className="detail" style={{ position: "relative", paddingLeft: "270px" }}>

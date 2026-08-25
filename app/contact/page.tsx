@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { SiteLogo } from "@/components/site-logo";
 
 export default function ContactPage() {
   return (
     <main className="site-page">
       <header className="inner-nav">
-        <Link className="logo dark-logo" href="/"><span className="mark">M</span><span>Moonlight<br />Marine</span></Link>
+        <SiteLogo variant="compact" />
         <nav><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/contact">Contact</Link></nav>
       </header>
       <section className="detail contact-detail">

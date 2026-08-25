@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MoonMark } from "@/components/moon-mark";
+import { SiteLogo } from "@/components/site-logo";
 
 const services = [
   ["General", "general"],
@@ -31,11 +31,7 @@ export default function Home() {
   return (
     <main className="mock-home">
       <header className="topbar">
-        <Link className="brand" href="/" aria-label="Moonlight Marine home">
-          <MoonMark className="crescent" />
-          <span className="brand-word">MOONLIGHT</span>
-          <span className="brand-sub"><i /> MARINE <i /></span>
-        </Link>
+        <SiteLogo />
         <nav className="main-nav" aria-label="Main navigation">
           <Link className="active" href="/">HOME</Link>
           <details className="services-dropdown">

@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SiteLogo } from "@/components/site-logo";
 
 export default function AboutPage() {
   return (
     <main className="about-page">
       <header className="inner-nav about-nav">
-        <Link className="logo dark-logo" href="/" aria-label="Moonlight Marine home">
-          <span className="mark">M</span><span>Moonlight<br />Marine</span>
-        </Link>
+        <SiteLogo variant="compact" />
         <nav aria-label="About navigation">
           <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
