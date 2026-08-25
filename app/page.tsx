@@ -55,7 +55,7 @@ export default function Home() {
       <section className="design-hero">
         <div className="blueprint" aria-hidden="true" />
         <div className="hero-copy-new">
-          <h1>WORKING YOUR WAY<br />BACK TO THE WATER</h1>
+          <h1>GETTING YOU BACK<br /><em>ON THE WATER</em></h1>
           <div className="gold-rule" />
           <p>Specializing in marine electrical systems, diagnostics, and custom solutions for power, safety, and performance you can trust.</p>
           <div className="hero-actions">
