@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MoonMark } from "@/components/moon-mark";
 
 const services = [
   ["General", "general"],
@@ -31,7 +32,7 @@ export default function Home() {
     <main className="mock-home">
       <header className="topbar">
         <Link className="brand" href="/" aria-label="Moonlight Marine home">
-          <span className="crescent" aria-hidden="true" />
+          <MoonMark className="crescent" />
           <span className="brand-word">MOONLIGHT</span>
           <span className="brand-sub"><i /> MARINE <i /></span>
         </Link>
