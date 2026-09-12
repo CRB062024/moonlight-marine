@@ -6,7 +6,7 @@ export default function AboutPage() {
     <main className="about-page">
       <header className="inner-nav about-nav">
         <Link className="logo dark-logo" href="/" aria-label="Moonlight Marine home">
-          <span className="mark">M</span><span>Moonlight<br />Marine</span>
+          <span className="mark">M</span><span>oonlight<br />Marine</span>
         </Link>
         <nav aria-label="About navigation">
           <Link href="/">Home</Link>
