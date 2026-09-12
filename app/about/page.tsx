@@ -48,7 +48,7 @@ export default function AboutPage() {
       <section className="about-cta">
         <p className="eyebrow">Ready when you are</p>
         <h2>Let&apos;s get you<br /><em>back on the water.</em></h2>
-        <Link className="button ink-button" href="/contact">Contact Moonlight</Link>
+        <Link className="button ink-button" href="/contact">Contact Moonlightmarine</Link>
       </section>
     </main>
   );
