@@ -64,7 +64,7 @@ export default function Home() {
           </div>
         </div>
         <div className="sailboat-frame">
-          <img src="/moonlight-approved-hero.jpg?v=4" alt="Moonlit sailboat on the water" className="approved-hero-image" />
+          <img src="/moonlight-closeup-sailboat-hero.jpg?v=1" alt="Realistic close-up of a sailboat on open water at sunset" className="approved-hero-image" />
         </div>
       </section>
 
