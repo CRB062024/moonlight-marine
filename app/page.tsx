@@ -34,7 +34,7 @@ export default function Home() {
           <span className="crescent" aria-hidden="true" />
           <span className="brand-copy">
             <span className="brand-word">MOONLIGHT</span>
-            <span className="brand-sub"><i /> MARINE <i /></span>
+            <span className="brand-sub"><i /> <span className="marine-word"><span className="marine-initial">M</span>ARINE</span> <i /></span>
           </span>
         </Link>
         <nav className="main-nav" aria-label="Main navigation">
