@@ -10,10 +10,10 @@ export default function ContactPage() {
       <section className="detail contact-detail">
         <p className="eyebrow">Contact Moonlight Marine</p><h1>Let&apos;s get<br /><em>underway.</em></h1>
         <div className="detail-copy contact-list">
-          <p style={{ marginBottom: "45px" }}><small>Phone</small><a href="tel:+15046069029">(504) 606-9029</a></p>
-          <p style={{ marginBottom: "45px" }}><small>Fax</small><span>(985) 845-7468</span></p>
-          <p style={{ marginBottom: "45px" }}><small>Email</small><a href="mailto:info@moonlightmarine.com">info@moonlightmarine.com</a></p>
-          <p style={{ marginBottom: 0 }}><small>Location</small><span>Madisonville, LA 70447</span></p>
+          <p style={{ marginBottom: "45px" }}><small style={{ display: "inline-block", marginRight: "24px" }}>Phone</small><a href="tel:+15046069029">(504) 606-9029</a></p>
+          <p style={{ marginBottom: "45px" }}><small style={{ display: "inline-block", marginRight: "24px" }}>Fax</small><span>(985) 845-7468</span></p>
+          <p style={{ marginBottom: "45px" }}><small style={{ display: "inline-block", marginRight: "24px" }}>Email</small><a href="mailto:info@moonlightmarine.com">info@moonlightmarine.com</a></p>
+          <p style={{ marginBottom: 0 }}><small style={{ display: "inline-block", marginRight: "24px" }}>Location</small><span>Madisonville, LA 70447</span></p>
         </div>
       </section>
     </main>
