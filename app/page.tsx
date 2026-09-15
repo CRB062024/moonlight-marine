@@ -33,7 +33,7 @@ export default function Home() {
         <Link className="brand" href="/" aria-label="Moonlight Marine home">
           <span className="crescent" aria-hidden="true" />
           <span className="brand-copy">
-            <span className="brand-word">MOONLIGHT</span>
+            <span className="brand-word">OONLIGHT</span>
             <span className="brand-sub"><i /> <span className="marine-word"><span className="marine-initial">M</span>ARINE</span> <i /></span>
           </span>
         </Link>
