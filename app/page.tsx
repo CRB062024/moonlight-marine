@@ -32,8 +32,10 @@ export default function Home() {
       <header className="topbar">
         <Link className="brand" href="/" aria-label="Moonlight Marine home">
           <span className="crescent" aria-hidden="true" />
-          <span className="brand-word">MOONLIGHT</span>
-          <span className="brand-sub"><i /> MARINE <i /></span>
+          <span className="brand-copy">
+            <span className="brand-word">MOONLIGHT</span>
+            <span className="brand-sub"><i /> MARINE <i /></span>
+          </span>
         </Link>
         <nav className="main-nav" aria-label="Main navigation">
           <Link className="active" href="/">HOME</Link>
