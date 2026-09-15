@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -23,7 +22,7 @@ export default function AboutPage() {
           <p>Responsive marine service built around practical experience, careful troubleshooting, quality workmanship, and getting your vessel ready for what comes next.</p>
         </div>
         <div className="about-image-frame">
-          <Image src="/moonlight-approved-hero-square.jpg?v=restored1" alt="Sailboat at sunset on open water" fill priority sizes="(max-width: 780px) 92vw, 45vw" />
+          <img src="/moonlight-approved-hero-square.jpg" alt="Sailboat at sunset on open water" width="1200" height="1200" />
         </div>
       </section>
 
