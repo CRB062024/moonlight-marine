@@ -64,7 +64,7 @@ export default function Home() {
           </div>
         </div>
         <div className="sailboat-frame">
-          <img src="/moonlight-new-hero.jpg?v=7" alt="Sailboat at sunset on open water" className="approved-hero-image" />
+          <img src="/moonlight-new-hero.jpg?v=8" alt="Sailboat at sunset on open water" className="approved-hero-image" />
         </div>
       </section>
 
@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       <footer className="design-footer">
-        <a href="tel:+15041234567" className="footer-item"><span className="footer-icon">⌕</span> (504) 123-4567</a>
+        <a href="tel:+15046069029" className="footer-item"><span className="footer-icon">⌕</span> (504) 606-9029</a>
         <a href="mailto:info@moonlightmarine.com" className="footer-item"><span className="footer-icon">✉</span> info@moonlightmarine.com</a>
         <span className="footer-item"><span className="footer-icon">●</span> New Orleans, Louisiana</span>
         <div className="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a></div>
