@@ -18,7 +18,7 @@ export default function ServicePage({ params }: { params: { service: string } })
       </header>
       <section className="detail" style={{ position: "relative", paddingLeft: "270px" }}>
         <div style={{ position: "absolute", left: "55px", top: "55px", width: "175px", height: "175px", borderRadius: "50%", overflow: "hidden", border: "5px solid #e9ad2f", boxShadow: "0 12px 35px rgba(6,23,45,.18)" }}>
-          <img src="/moonlight-closeup-sailboat-hero.jpg?v=restore-20260921" alt="Close-up of sailboat on the water" width="1200" height="1200" loading="eager" fetchPriority="high" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          <img src="https://raw.githubusercontent.com/CRB062024/moonlight-marine/main/public/moonlight-closeup-sailboat-hero.jpg?v=restore-20260921" alt="Close-up of sailboat on the water" width="1200" height="1200" loading="eager" fetchPriority="high" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
         </div>
         <div style={{ maxWidth: "900px" }}>
           <Link className="back-link" href="/services">← All services</Link>
