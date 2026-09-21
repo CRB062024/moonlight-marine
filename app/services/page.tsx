@@ -14,7 +14,7 @@ export default function ServicesPage() {
           <p>Experienced, responsive service for the systems and moments that keep you on the water.</p>
         </div>
         <div style={{ position: "absolute", right: "7%", top: "50%", transform: "translateY(-50%)", width: "min(34vw,420px)", aspectRatio: "1", borderRadius: "50%", overflow: "hidden", border: "6px solid #e9ad2f", boxShadow: "0 20px 55px rgba(6,23,45,.22)" }}>
-          <img src="/moonlight-closeup-sailboat-hero.jpg?v=restore-20260921" alt="Close-up of sailboat on the water" width="1200" height="1200" loading="eager" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          <img src="https://raw.githubusercontent.com/CRB062024/moonlight-marine/main/public/moonlight-closeup-sailboat-hero.jpg?v=restore-20260921" alt="Close-up of sailboat on the water" width="1200" height="1200" loading="eager" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
         </div>
       </section>
       <section className="service-grid">
