@@ -66,7 +66,7 @@ export default function Home() {
           </div>
         </div>
         <div className="sailboat-frame">
-          <img src="/moonlight-live-hero.jpg?v=live-hero-1" alt="Sailboat at sunset on open water" className="approved-hero-image" width="1200" height="1200" loading="eager" fetchPriority="high" />
+          <img src="/moonlight-new-hero.jpg?v=photos-restore-final" alt="Sailboat at sunset on open water" className="approved-hero-image" width="1200" height="1200" loading="eager" fetchPriority="high" />
         </div>
       </section>
 
