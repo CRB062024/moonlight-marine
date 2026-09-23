@@ -22,7 +22,7 @@ export default function AboutPage() {
           <p>Responsive marine service built around practical experience, careful troubleshooting, quality workmanship, and getting your vessel ready for what comes next.</p>
         </div>
         <div className="about-image-frame">
-          <img src="https://raw.githubusercontent.com/CRB062024/moonlight-marine/main/public/moonlight-new-hero.jpg?v=restore-20260921" alt="Sailboat at sunset on open water" width="1200" height="1200" loading="eager" fetchPriority="high" />
+          <img src="/moonlight-live-hero.jpg?v=live-hero-1" alt="Sailboat at sunset on open water" width="1200" height="1200" loading="eager" fetchPriority="high" />
         </div>
       </section>
 
