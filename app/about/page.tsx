@@ -13,7 +13,7 @@ const services = [
 
 export default function AboutPage() {
   return (
-    <main className="about-page">
+    <main className="site-page shared-page about-page">
       <header className="topbar about-topbar">
         <Link className="brand" href="/" aria-label="Moonlight Marine home">
           <span className="crescent" aria-hidden="true" />
