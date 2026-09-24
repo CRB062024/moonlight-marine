@@ -42,7 +42,7 @@ export default function ServicesPage() {
           <p>Experienced, responsive service for the systems and moments that keep you on the water.</p>
         </div>
         <div className="shared-page-photo">
-          <img src="/moonlight-right-circle.webp?v=uploaded-20260924" alt="Sailboat on the water" width="1200" height="1200" loading="eager" fetchPriority="high" />
+          <img src="/moonlight-approved-hero-square.jpg?v=sitewide-20260924" alt="Sailboat on the water" width="1200" height="1200" loading="eager" fetchPriority="high" />
         </div>
       </section>
       <section className="service-grid">
