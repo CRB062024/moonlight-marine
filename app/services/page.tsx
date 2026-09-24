@@ -1,20 +1,48 @@
 import Link from "next/link";
 import { services } from "./data";
 
+const serviceLinks = services;
+
+function SharedHeader({ active }: { active: "home" | "services" | "about" | "contact" }) {
+  return (
+    <header className="topbar">
+      <Link className="brand" href="/" aria-label="Moonlight Marine home">
+        <span className="crescent" aria-hidden="true" />
+        <span className="brand-copy">
+          <span className="brand-word">MOONLIGHT</span>
+          <span className="brand-sub"><i /> <span className="marine-word"><span className="marine-initial">M</span>ARINE</span> <i /></span>
+        </span>
+      </Link>
+      <nav className="main-nav" aria-label="Main navigation">
+        <Link className={active === "home" ? "active" : ""} href="/">HOME</Link>
+        <details className="services-dropdown" open={active === "services"}>
+          <summary>SERVICES <span aria-hidden="true">⌄</span></summary>
+          <div className="services-menu">
+            {serviceLinks.map(([title, slug]) => <Link href={`/services/${slug}`} key={slug}>{title}</Link>)}
+          </div>
+        </details>
+        <Link className={active === "about" ? "active" : ""} href="/about">ABOUT</Link>
+        <Link className={active === "contact" ? "active" : ""} href="/contact">CONTACT</Link>
+      </nav>
+      <div className="partner-links">
+        <a href="https://abycinc.org/" target="_blank" rel="noreferrer">ABYC <span>↗</span></a>
+        <a href="https://bayousailing.com/" target="_blank" rel="noreferrer">BAYOU SAILING <span>↗</span></a>
+      </div>
+    </header>
+  );
+}
+
 export default function ServicesPage() {
   return (
-    <main className="site-page">
-      <header className="inner-nav">
-        <Link className="logo dark-logo" href="/"><span className="mark">M</span><span>Moonlight<br />Marine</span></Link>
-        <nav><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/contact">Contact</Link></nav>
-      </header>
+    <main className="site-page shared-page">
+      <SharedHeader active="services" />
       <section className="page-hero" style={{ position: "relative", overflow: "hidden" }}>
         <div style={{ position: "relative", zIndex: 2 }}>
           <p className="eyebrow">Marine services</p><h1>Ready for<br /><em>whatever&apos;s next.</em></h1>
           <p>Experienced, responsive service for the systems and moments that keep you on the water.</p>
         </div>
-        <div style={{ position: "absolute", right: "7%", top: "50%", transform: "translateY(-50%)", width: "min(34vw,420px)", aspectRatio: "1", borderRadius: "50%", overflow: "hidden", border: "6px solid #e9ad2f", boxShadow: "0 20px 55px rgba(6,23,45,.22)" }}>
-          <img src="/moonlight-restored-sailboat.jpg?v=final20260924" alt="Close-up of sailboat on the water" width="1200" height="1200" loading="eager" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        <div className="shared-page-photo">
+          <img src="/moonlight-restored-sailboat.jpg?v=final20260924" alt="Sailboat on the water" width="1200" height="1200" loading="eager" fetchPriority="high" />
         </div>
       </section>
       <section className="service-grid">
@@ -24,7 +52,6 @@ export default function ServicesPage() {
           </Link>
         ))}
       </section>
-      <style>{`@media(max-width:780px){.page-hero{min-height:620px!important;padding-bottom:300px!important}.page-hero>div:last-child{right:50%!important;top:auto!important;bottom:35px!important;transform:translateX(50%)!important;width:78vw!important}}`}</style>
     </main>
   );
 }
