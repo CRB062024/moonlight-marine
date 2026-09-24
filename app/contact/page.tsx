@@ -51,7 +51,7 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="contact-photo">
-          <img src="/moonlight-closeup-sailboat-hero.jpg?v=sitewide-20260924" alt="Sailboat on the water at sunset" width="1200" height="1200" loading="eager" fetchPriority="high" />
+          <img src="/moonlight-approved-hero-square.jpg?v=sitewide-20260924" alt="Sailboat on the water at sunset" width="1200" height="1200" loading="eager" fetchPriority="high" />
         </div>
       </section>
     </main>
