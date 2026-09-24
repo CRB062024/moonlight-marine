@@ -1,18 +1,42 @@
 import Link from "next/link";
 
+const services = [
+  ["General", "general"],
+  ["Diving", "diving"],
+  ["Electrical", "electrical"],
+  ["Electronics", "electronics"],
+  ["Maintenance", "maintenance"],
+  ["Mechanical", "mechanical"],
+  ["Plumbing", "plumbing"],
+  ["Salvage", "salvage"],
+] as const;
+
 export default function AboutPage() {
   return (
     <main className="about-page">
-      <header className="inner-nav about-nav">
-        <Link className="logo dark-logo" href="/" aria-label="Moonlight Marine home">
-          <span className="mark">M</span><span>oonlight<br />Marine</span>
+      <header className="topbar about-topbar">
+        <Link className="brand" href="/" aria-label="Moonlight Marine home">
+          <span className="crescent" aria-hidden="true" />
+          <span className="brand-copy">
+            <span className="brand-word">MOONLIGHT</span>
+            <span className="brand-sub"><i /> <span className="marine-word"><span className="marine-initial">M</span>ARINE</span> <i /></span>
+          </span>
         </Link>
-        <nav aria-label="About navigation">
-          <Link href="/">Home</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/about" aria-current="page">About</Link>
-          <Link href="/contact">Contact</Link>
+        <nav className="main-nav" aria-label="Main navigation">
+          <Link href="/">HOME</Link>
+          <details className="services-dropdown">
+            <summary>SERVICES <span aria-hidden="true">⌄</span></summary>
+            <div className="services-menu">
+              {services.map(([title, slug]) => <Link href={`/services/${slug}`} key={slug}>{title}</Link>)}
+            </div>
+          </details>
+          <Link className="active" href="/about">ABOUT</Link>
+          <Link href="/contact">CONTACT</Link>
         </nav>
+        <div className="partner-links">
+          <a href="https://abycinc.org/" target="_blank" rel="noreferrer">ABYC <span>↗</span></a>
+          <a href="https://bayousailing.com/" target="_blank" rel="noreferrer">BAYOU SAILING <span>↗</span></a>
+        </div>
       </header>
 
       <section className="about-hero">
