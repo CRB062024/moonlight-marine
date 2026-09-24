@@ -22,7 +22,7 @@ export default function ServicePage({ params }: { params: { service: string } })
         </Link>
         <nav className="main-nav" aria-label="Main navigation">
           <Link href="/">HOME</Link>
-          <details className="services-dropdown" open>
+          <details className="services-dropdown active">
             <summary>SERVICES <span aria-hidden="true">⌄</span></summary>
             <div className="services-menu">
               {services.map((item) => <Link href={`/services/${item.slug}`} key={item.slug}>{item.title}</Link>)}
