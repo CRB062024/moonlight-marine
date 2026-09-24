@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { services } from "./data";
 
-const serviceLinks = services;
+
 
 function SharedHeader({ active }: { active: "home" | "services" | "about" | "contact" }) {
   return (
@@ -18,7 +18,7 @@ function SharedHeader({ active }: { active: "home" | "services" | "about" | "con
         <details className={"services-dropdown" + (active === "services" ? " active" : "")}>
           <summary>SERVICES <span aria-hidden="true">⌄</span></summary>
           <div className="services-menu">
-            {serviceLinks.map(([title, slug]) => <Link href={`/services/${slug}`} key={slug}>{title}</Link>)}
+            {services.map((service) => <Link href={`/services/${service.slug}`} key={service.slug}>{service.title}</Link>)}
           </div>
         </details>
         <Link className={active === "about" ? "active" : ""} href="/about">ABOUT</Link>
