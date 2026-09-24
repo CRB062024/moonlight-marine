@@ -15,7 +15,7 @@ function SharedHeader({ active }: { active: "home" | "services" | "about" | "con
       </Link>
       <nav className="main-nav" aria-label="Main navigation">
         <Link className={active === "home" ? "active" : ""} href="/">HOME</Link>
-        <details className="services-dropdown" open={active === "services"}>
+        <details className={"services-dropdown" + (active === "services" ? " active" : "")}>
           <summary>SERVICES <span aria-hidden="true">⌄</span></summary>
           <div className="services-menu">
             {serviceLinks.map(([title, slug]) => <Link href={`/services/${slug}`} key={slug}>{title}</Link>)}
