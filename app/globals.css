@@ -28,7 +28,7 @@
 .shared-page,.site-page{min-height:100svh;background:var(--navy);color:var(--white)}
 .shared-page .topbar,.site-page .topbar{background:var(--navy);color:var(--white)}
 .shared-page .main-nav>a,.shared-page .services-dropdown>summary,.site-page .main-nav>a,.site-page .services-dropdown>summary{color:var(--white)}
-.shared-page .main-nav>a.active,.site-page .main-nav>a.active{color:var(--gold)}
+.shared-page .main-nav>a.active,.site-page .main-nav>a.active,.shared-page .services-dropdown.active>summary,.site-page .services-dropdown.active>summary{color:var(--gold)}
 .shared-page .eyebrow,.site-page .eyebrow{color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin:0 0 18px}
 .page-hero{min-height:590px;padding:85px clamp(28px,7vw,100px);display:flex;align-items:center;background:radial-gradient(circle at 30% 60%,#0d355a 0,#071c34 48%,#05152a 78%);color:var(--white)}
 .page-hero h1{font:700 clamp(54px,6.4vw,92px)/.95 "Playfair Display",serif;letter-spacing:-.05em;margin:0 0 28px}
