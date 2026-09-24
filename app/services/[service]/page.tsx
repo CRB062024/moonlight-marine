@@ -39,7 +39,7 @@ export default function ServicePage({ params }: { params: { service: string } })
 
       <section className="detail service-detail">
         <div className="detail-photo">
-          <img src="/moonlight-closeup-sailboat-hero.jpg?v=sitewide-20260924" alt="Close-up of sailboat on the water" width="1200" height="1200" loading="eager" fetchPriority="high" />
+          <img src="/moonlight-right-circle.webp?v=uploaded-20260924" alt="Close-up of sailboat on the water" width="1200" height="1200" loading="eager" fetchPriority="high" />
         </div>
         <div className="detail-content">
           <Link className="back-link" href="/services">← All services</Link>
