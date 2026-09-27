@@ -66,7 +66,7 @@ export default function Home() {
           </div>
         </div>
         <div className="sailboat-frame">
-          <img src="/moonlight-approved-hero-square.jpg?v=approved-hero-20260927" alt="Approved Moonlight Marine sailboat artwork on open water" className="approved-hero-image" width="1200" height="1200" loading="eager" fetchPriority="high" />
+          <img src="/moonlight-approved-hero-square.jpg?v=approved-hero-20260927" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "https://raw.githubusercontent.com/CRB062024/moonlight-marine/main/public/moonlight-approved-hero-square.jpg"; }} alt="Approved Moonlight Marine sailboat artwork on open water" className="approved-hero-image" width="1200" height="1200" loading="eager" fetchPriority="high" />
         </div>
       </section>
 
